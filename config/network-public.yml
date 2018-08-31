@@ -1,0 +1,17 @@
+#allow only external access to Jupyter (disallow access from any other pods)
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: sqlinjection-public
+spec:
+  podSelector:
+    matchLabels:
+      group: rkalyana-public
+  ingress:
+  - ports:
+    - port: 8888
+  - from:
+    - podSelector:
+        matchExpressions:
+              - {key: group, operator: DoesNotExist, values: []}
+
