@@ -28,4 +28,4 @@ ENV PATH=$HOME/app:$PATH
 
 WORKDIR $HOME
 
-CMD ["start-notebook.sh","--NotebookApp.token=","--NotebookApp.password="]
+CMD ["start-notebook.sh","--NotebookApp.token="]
