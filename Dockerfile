@@ -27,3 +27,5 @@ RUN chmod +x RecoverDatabase
 ENV PATH=$HOME/app:$PATH
 
 WORKDIR $HOME
+
+CMD ["start-notebook.sh","--NotebookApp.token=","--NotebookApp.password="]
