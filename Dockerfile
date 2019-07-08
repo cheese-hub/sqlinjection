@@ -5,7 +5,7 @@ MAINTAINER Rajesh Kalyanam <rkalyanapurdue@gmail.com>
 
 #install sqlite package for a simple database engine
 RUN conda update -n base conda && \
-    conda install sqlite
+    conda install sqlite=3.13.0
 
 RUN mkdir $HOME/app && fix-permissions $HOME/app
 
